@@ -27,6 +27,11 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.mapstruct/mapstruct
 	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.5.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+	// https://mvnrepository.com/artifact/org.testcontainers/junit-jupiter
+	testImplementation group: 'org.testcontainers', name: 'junit-jupiter', version: '1.19.7'
+	// https://mvnrepository.com/artifact/org.testcontainers/postgresql
+	testImplementation group: 'org.testcontainers', name: 'postgresql', version: '1.19.7'
+
 
 
 	implementation 'com.google.protobuf:protobuf-java:4.26.1'
