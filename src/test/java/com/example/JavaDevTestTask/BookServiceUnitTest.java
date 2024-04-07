@@ -26,7 +26,6 @@ public class BookServiceUnitTest {
 
     @Test
     public void testAddBook() {
-
         BookDto bookDto = new BookDto();
         bookDto.setTitle("Test Book");
         bookDto.setAuthor("Test Author");
@@ -37,9 +36,7 @@ public class BookServiceUnitTest {
         Mockito.when(bookRepository.save(Mockito.any(BookEntity.class))).thenReturn(new BookEntity());
         Mockito.when(bookMapper.bookEntityToBookDto(Mockito.any(BookEntity.class))).thenReturn(bookDto);
 
-
         BookDto addedBook = bookService.addBook(bookDto);
-
 
         assertEquals(bookDto.getTitle(), addedBook.getTitle());
         assertEquals(bookDto.getAuthor(), addedBook.getAuthor());

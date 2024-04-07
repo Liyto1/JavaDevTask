@@ -26,16 +26,13 @@ public class BookServiceIntegrationTest {
 
     @Test
     public void testAddBook() {
-        // Create a new book
         BookDto bookDto = new BookDto();
         bookDto.setTitle("Test Book");
         bookDto.setAuthor("Test Author");
         bookDto.setIsbn("1234567890123");
         bookDto.setQuantity(10);
 
-
         BookDto addedBook = bookService.addBook(bookDto);
-
 
         assertEquals(bookDto.getTitle(), addedBook.getTitle());
         assertEquals(bookDto.getAuthor(), addedBook.getAuthor());
